@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilos globales */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Estilos específicos para el contenedor principal */
+        .container {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 15px;
+            background-color: #fff;
+        }
+
+        /* Contenido del Email */
+        .content{
+            padding: 0 20px;
+        }
+
+
+        /* Estilos para los encabezados */
+        h1, h2, h3 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para los enlaces */
+        a {
+            color: #007bff;
+        }
+
+        /* Estilos para las secciones */
+        .section {
+            margin-bottom: 30px;
+        }
+
+        /* Estilos específicos para el botón */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Estilos del banner */
+        .banner-container {
+            max-width: 700px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0px auto;
+            overflow: hidden;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Estilos para hacer el diseño responsivo */
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    <!-- HEADER -->
+        <div class="banner-container">
+            <img class="banner-img" src="../img/Header-mailing.png" alt="Banner" />
+        </div>
+
+    <!-- CONTENT -->
+        <div class="content">
+            <h1>ARL RECHAZADA</h1>
+            <h3>PROBLEMAS DOCUMENTOS SOPORTES</h3>
+            
+            <div class="section">
+                <p>Estimado(a) {{Nombre}}, espero que estés muy bien. Lamentamos informarte que tu solicitud de afiliación a ARL ha sido RECHAZADA, debido a que algunos de los documentos cargados no cumplen con los siguientes criterios:</p>
+                <ul>
+                    <li>Legibilidad: Algunos de los documentos no son legibles. Recuerda que el documento de identidad debe estar ampliado al 150%.</li>
+                    <li>Fecha de expedición: Algunos documentos no son recientes, ya que la fecha de expedición no debe ser mayor a 30 días.</li>
+                    <li>Correspondencia: Algunos documentos no concuerdan con lo solicitado. El certificado de afiliación al sistema de seguridad social debe indicar que estás activo.</li>
+                </ul>
+                <P>Lamentamos los inconvenientes ocasionados y te invitamos a realizar las correcciones necesarias para que tu solicitud pueda ser procesada satisfactoriamente en el futuro.</P>
+                <p>Por favor, asegúrate de adjuntar documentos actualizados para que puedas volver a realizar el proceso de afiliación de manera exitosa a través de este <a href="https://repo.cunapp.dev/web/2023/publicaciones/practicas-paso-paso.pdf">enlace</a>.</p>
+                <p>Si tienes alguna pregunta o duda, no dudes en contactar a tu docente <a href="https://app.powerbi.com/view?r=eyJrIjoiZDhjZjNmMzYtM2I4Yi00YjBhLTkzNGMtN2NkNDM0ZjMyY2YyIiwidCI6IjUyMDlhOGNhLTc1ZGQtNGVhMy05MDc0LTZjMDAwMzMzMzQ4YiIsImMiOjR9 ">aquí</a>.</p>
+            </div>
+
+        </div>
+
+    <!-- FOOTER -->
+        <div class="banner-container">
+            <img class="banner-img" src="../img/footer-mailing.png" alt="Banner" />
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+C:\Users\CUN\Documents\CUN\Desarrollo\Proyectos\00_TestProjects\Aplicacion Consola\ConsoleAppToTest\ConsoleAppToTest\bin\Debug\net6.0\ConsoleAppToTest.exe
+C:\Users\CUN\Documents\CUN\Desarrollo\Proyectos\00_TestProjects\Aplicacion Consola\ConsoleAppToTest\ConsoleAppToTest\bin\Debug\net6.0\ConsoleAppToTest.deps.json
+C:\Users\CUN\Documents\CUN\Desarrollo\Proyectos\00_TestProjects\Aplicacion Consola\ConsoleAppToTest\ConsoleAppToTest\bin\Debug\net6.0\ConsoleAppToTest.runtimeconfig.json
+C:\Users\CUN\Documents\CUN\Desarrollo\Proyectos\00_TestProjects\Aplicacion Consola\ConsoleAppToTest\ConsoleAppToTest\bin\Debug\net6.0\ConsoleAppToTest.dll
+C:\Users\CUN\Documents\CUN\Desarrollo\Proyectos\00_TestProjects\Aplicacion Consola\ConsoleAppToTest\ConsoleAppToTest\bin\Debug\net6.0\ConsoleAppToTest.pdb
+C:\Users\CUN\Documents\CUN\Desarrollo\Proyectos\00_TestProjects\Aplicacion Consola\ConsoleAppToTest\ConsoleAppToTest\obj\Debug\net6.0\ConsoleAppToTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CUN\Documents\CUN\Desarrollo\Proyectos\00_TestProjects\Aplicacion Consola\ConsoleAppToTest\ConsoleAppToTest\obj\Debug\net6.0\ConsoleAppToTest.AssemblyInfoInputs.cache
+C:\Users\CUN\Documents\CUN\Desarrollo\Proyectos\00_TestProjects\Aplicacion Consola\ConsoleAppToTest\ConsoleAppToTest\obj\Debug\net6.0\ConsoleAppToTest.AssemblyInfo.cs
+C:\Users\CUN\Documents\CUN\Desarrollo\Proyectos\00_TestProjects\Aplicacion Consola\ConsoleAppToTest\ConsoleAppToTest\obj\Debug\net6.0\ConsoleAppToTest.csproj.CoreCompileInputs.cache
+C:\Users\CUN\Documents\CUN\Desarrollo\Proyectos\00_TestProjects\Aplicacion Consola\ConsoleAppToTest\ConsoleAppToTest\obj\Debug\net6.0\ConsoleAppToTest.dll
+C:\Users\CUN\Documents\CUN\Desarrollo\Proyectos\00_TestProjects\Aplicacion Consola\ConsoleAppToTest\ConsoleAppToTest\obj\Debug\net6.0\refint\ConsoleAppToTest.dll
+C:\Users\CUN\Documents\CUN\Desarrollo\Proyectos\00_TestProjects\Aplicacion Consola\ConsoleAppToTest\ConsoleAppToTest\obj\Debug\net6.0\ConsoleAppToTest.pdb
+C:\Users\CUN\Documents\CUN\Desarrollo\Proyectos\00_TestProjects\Aplicacion Consola\ConsoleAppToTest\ConsoleAppToTest\obj\Debug\net6.0\ConsoleAppToTest.genruntimeconfig.cache
+C:\Users\CUN\Documents\CUN\Desarrollo\Proyectos\00_TestProjects\Aplicacion Consola\ConsoleAppToTest\ConsoleAppToTest\obj\Debug\net6.0\ref\ConsoleAppToTest.dll

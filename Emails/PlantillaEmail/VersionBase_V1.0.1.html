@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Template</title>
+    <style>
+        /* Estilos globales */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Estilos específicos para el contenedor principal */
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        /* Estilos para los encabezados */
+        h1, h2, h3 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para los enlaces */
+        a {
+            color: #007bff;
+        }
+
+        /* Estilos para las secciones */
+        .section {
+            margin-bottom: 30px;
+        }
+
+        /* Estilos específicos para el botón */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Estilos del banner */
+        .banner-container {
+            max-width: 700px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Estilos para hacer el diseño responsivo */
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    <!-- HEADER -->
+        <div class="banner-container">
+            <img class="banner-img" src="img/Header-mailing.png" alt="Banner" />
+        </div>
+
+        <h1>ARL APROBADA</h1>
+        
+        <div class="section">
+            <p>¡Hola!</p>
+            <p>Estimado(a) (JOHAN ALEXIS CHAVARRIA BUSTOS), espero que estés muy bien. Te informamos que tu solicitud de ARL ha sido APROBADA. El certificado será enviado a tu correo institucional @cun.edu.co a más tardar el día de inicio de tu práctica.</p>
+            <p>Si tienes alguna duda no dudes en contactar a tu docente aquí:  <a href="https://app.powerbi.com/view?r=eyJrIjoiZDhjZjNmMzYtM2I4Yi00YjBhLTkzNGMtN2NkNDM0ZjMyY2YyIiwidCI6IjUyMDlhOGNhLTc1ZGQtNGVhMy05MDc0LTZjMDAwMzMzMzQ4YiIsImMiOjR9 ">contactar</a></p>
+            <p>¡Esperamos verte pronto!</p>
+        </div>
+        
+        <div class="section">
+            <img src="URL_DEL_BANNER" alt="Banner" style="width: 100%; max-width: 100%; height: auto;">
+        </div>
+        
+        <div class="section">
+            <p>Si tienes alguna pregunta, no dudes en <a href="#">contactarnos</a>.</p>
+        </div>
+        
+        <div class="section">
+            <a href="#" class="btn">Ver más</a>
+        </div>
+
+    <!-- FOOTER -->
+        <div class="banner-container">
+            <img class="banner-img" src="img/footer-mailing.png" alt="Banner" />
+        </div>
+    </div>
+</body>
+</html>

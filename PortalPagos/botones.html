@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Botones</title>
+</head>
+<body>
+    <button id="botonAyuda">?</button>
+    <div class="mensajeEmergente" id="mensaje">No sabes cómo pagar?</div>
+
+
+
+
+<style>
+ /* Estilo para el mensaje emergente */
+.mensajeEmergente {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333333;
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Estilo para el botón con el signo de interrogación */
+#botonAyuda {
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #333333;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#botonAyuda:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para el mensaje emergente cuando se muestra */
+#mensaje.mostrar {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+}
+</style>
+
+
+<script>
+    document.getElementById('botonAyuda').addEventListener('mouseover', function() {
+    document.getElementById('mensaje').classList.add('mostrar');
+    });
+
+    document.getElementById('botonAyuda').addEventListener('mouseout', function() {
+        document.getElementById('mensaje').classList.remove('mostrar');
+    });
+</script>
+
+
+<!-- Agrega jQuery (necesario para Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<!-- Agrega los archivos JS de Bootstrap -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

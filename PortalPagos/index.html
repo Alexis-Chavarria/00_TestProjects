@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <title>Index</title>
+</head>
+<body>
+    <button onclick="openModal()" id="open-modal-button" class="open-modal-button"><i class="fas fa-exclamation-circle"></i></button>
+    <button class="boton-ayuda">?</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Video tutoriales</h2>
+            <ul class="tutorial-list">
+                <li>
+                    <a href="URL_DEL_VIDEO_1" target="_blank">
+                        <span>
+                            <i class="fas fa-video"></i>
+                        </span>                        
+                        <span>
+                            Para aprovechar el
+                            <br>
+                            <b>Pronto pago:</b>
+                        </span>
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a href="URL_DEL_VIDEO_1" target="_blank">
+                        <span>
+                            <i class="fas fa-video"></i>
+                        </span>                        
+                        <span>
+                            Instructivo de 
+                            <br>
+                            <b>pago con cesantías:</b>
+                        </span>
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a href="URL_DEL_VIDEO_1" target="_blank">
+                        <span>
+                            <i class="fas fa-video"></i>
+                        </span>                        
+                        <span>
+                            Instructivo de pago cuota 
+                            <br>
+                            <b>cunvive por primer vez:</b>
+                        </span>
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a href="URL_DEL_VIDEO_1" target="_blank">
+                        <span>
+                            <i class="fas fa-video"></i>
+                        </span>                        
+                        <span>
+                            Instructivo de pago con 
+                            <br>
+                            <b>tarjeta credito, debito o PSE:</b>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+<style>
+    /* Estilos CSS */
+    h2 {
+        color: #84bd00;
+        width: 100%;
+        margin: 20px 0px;
+    }
+    /* Estilos del botón */
+    .open-modal-button {
+        position: fixed;
+        top: 85px;
+        right: 20px;
+        z-index: 9999;
+        padding: 4px;
+        border: none;
+        color: #1F2936;
+        background-color: transparent;
+        font-size: 42px;
+        cursor: pointer;
+        outline: none;
+        font-weight: bold;
+        transition: transform 0.2s ease;
+    }
+
+    .open-modal-button:hover {
+        transform: scale(1.3);
+    }
+
+    /* Estilos del modal */
+    /* Estilos para el modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+        background-color: #1F2936;
+        color: #FFF;
+        font-size: 18px;
+        margin: 65px auto;
+        padding: 26px;
+        border: 1px solid #888;
+        border-radius: 5px;
+        max-width: 400px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .close {
+        
+        color: #fff;
+        margin-left: auto;
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .tutorial-list {
+        list-style: none;
+        padding: 0;
+        width: 100%;
+    }
+
+    .tutorial-list li {
+    margin-bottom: 10px;
+    }
+
+    .tutorial-list li a {
+    color: #FFF;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    }
+
+    .tutorial-list li a i {
+        margin-right: 25px;
+    }
+
+    .tutorial-list li a span b {
+        color: #84bd00;
+    }
+
+
+    .boton-ayuda {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-ayuda:hover {
+  background-color: #2980b9;
+  transform: scale(1.1);
+}
+
+
+
+@media (min-width: 1200px) {
+
+    .open-modal-button {
+        right: calc((100vw - 1200px) / 2);
+        max-right: 50px; 
+    }
+
+}
+
+
+</style>
+
+
+
+<script>
+
+    // Codigo para el el boton "No sabes como pagar?" y su modal
+    var btnModal = document.getElementById("open-modal-button");
+
+    function openModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "block";
+
+
+        btnModal.style.display = "none"
+
+    }
+
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+
+        btnModal.style.display = "block"
+
+
+    }
+
+    window.onclick = function (event) {
+        var modal = document.getElementById("myModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+            btnModal.style.display = "block"
+        }
+    }
+
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner Responsivo</title>
+    <style>
+        /* Estilos globales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Estilos del banner */
+        .banner-img {
+            max-width: 700px;
+            width: 100%;
+            height: auto;
+            max-height: 170px;
+            min-height: 150px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        /* Estilos para hacer el diseño responsivo */
+        @media screen and (max-width: 720px) {
+            .banner-img {
+                max-width: 90%;
+                max-height: 120px;
+                min-height: 100px;
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img class="banner-img" src="img/footer-mailing.png" alt="Banner" />
+</body>
+</html>

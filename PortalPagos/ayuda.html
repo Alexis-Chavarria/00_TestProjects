@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-header_navbar">
+
+        <!-- Container Logo -->
+        <div id="logo">
+            <a href="https://cun.edu.co"><img src="~/img/logo.png" style="width:100px;" /></a>
+        </div>
+
+        <!-- Container Botones de navegacion -->
+        <div class="container_menu-items">
+            <ul id="menuIcons" class="menu-items">
+                <li><button class="btn btn-custom">Mis tickets</button></li>
+                <li><button class="btn btn-custom">Portal de Pagos</button></li>
+                <li><button class="btn btn-custom">Salir</button></li>
+            </ul>
+        </div>
+
+        <!-- Oculto Menu -->
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <!-- Oculto SideBar -->
+        <div class="sidebar">
+            <ul class="sidebar_menu">
+                <li><a><i class="fas fa-ticket-alt"></i>Mis tickets</a></li>
+                <li><a><i class="fas fa-credit-card"></i>Portal de pagos</a></li>
+                <li><a href="#" onclick="openModal()"><i class="fas fa-video"></i>Tutoriales de pago</a></li>
+                <hr>
+                <li><a><i class="fas fa-sign-out-alt"></i>Salir</a></li>
+            </ul>
+        </div>
+        <div class="overlaySideBar"></div>
+</div>
+
+
+      <style>
+
+.main-header_navbar{
+    width: 100%;
+    background-color: #0C2340;
+    display: flex;  
+    justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+	padding: 0 24px;
+}
+
+	.main-header_navbar::before{
+		left: -9999px; /* Posición inicial para extenderse */
+		right: -9999px;
+		background-color: #0C2340;
+	}
+
+
+/* Estilos generales del sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #0C2340;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    transition: left 0.3s ease-in-out;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+/* Estilo para el fondo opaco */
+.overlaySideBar {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+z-index: 999;
+}
+
+/* Estilos para los enlaces de la barra lateral */
+.sidebar_menu {
+    list-style: none;
+    padding: 32px 16px;
+    margin: 0;
+}
+
+.sidebar_menu li {
+    margin-bottom: 10px;
+}
+
+.sidebar_menu a {
+    display: block;
+    padding: 12px;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar_menu a:hover {
+    background-color: #84bd00;
+    border-radius: 5px;
+}
+
+.sidebar_menu a i{
+    margin-right: 16px;
+}	
+
+.hamburger{
+	display: none;
+}
+
+hr{
+	margin: 8px 0px;
+}
+      </style>
+
+
+</body>
+</html>

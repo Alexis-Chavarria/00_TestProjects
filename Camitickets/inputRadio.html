@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Form para validar numero telefonico -->
+    <form id="phone-validation_form">
+        <label for="phoneValidation">Verificar teléfono</label>
+        <input type="tel" id="phoneValidation" name="phoneValidation" required>
+        <br>
+        <button id="btn-phoneValidation" class="btn btn-success" type="submit">Verificar</button>
+    </form>
+    <!-- Form End -->
+    <!-- Validar año de nacimiento -->
+    <form id="dob-form" style="display: none;">
+        <label for="dob">Confirme su año de Nacimiento:</label>
+        <div id="dob-options">
+            <!-- Aquí se mostrarán las opciones de años de nacimiento -->
+        </div>
+        <br>
+        <button class="btn btn-success" type="submit">Verificar</button>
+    </form>
+
+    <form id="code-form" style="display: none;">
+        <label for="dob">FORM CODIGO</label>
+        <div id="dob-options">
+            <!-- Aquí se mostrarán las opciones de años de nacimiento -->
+        </div>
+        <br>
+        <button class="btn btn-success" type="submit">Verificar</button>
+    </form>
+
+
+    <!-- ===================== ESTILO  ====================== -->
+    <!-- ==================================================== -->
+
+    <style>
+
+        /* Estilos para el contenedor del radio button y el label */
+        #dob-options {
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* Estilo para el radio button */
+#dob-options input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #666;
+  margin: 0px 8px 0px 22px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Estilo para el radio button cuando está seleccionado */
+#dob-options input[type="radio"]:checked {
+  background-color: #2196F3;
+  border-color: #2196F3;
+}
+
+/* Estilo para el label del radio button */
+#dob-options label {
+  cursor: pointer;
+}
+
+    </style>
+
+
+    
+    <!-- ===================== SCRIPT  ====================== -->
+    <!-- ==================================================== -->
+
+    <script>
+        const phoneForm = document.getElementById("phone-form");
+        const codeForm = document.getElementById("code-form");
+
+        const phoneValidationForm = document.getElementById("phone-validation_form");
+        const dobForm = document.getElementById("dob-form");            
+        //let dataEstudiante = `@Html.Raw(ViewBag.EstudianteJson)`;
+        //let JsonEstudiante = JSON.parse(dataEstudiante);
+
+        let JsonEstudiante = [
+            {
+                "feC_NACIMIENTO" : "12/02/1998"
+            },
+            {
+                "feC_NACIMIENTO" : "12/02/2021"
+            }
+        ]
+            
+        
+
+        phoneValidationForm.addEventListener('submit', function(event){
+
+            event.preventDefault();
+
+            var telefono = "3222614015"
+            let validarTelefono = document.getElementById('phoneValidation');
+
+            console.log("Telefono del JSON: " + telefono);
+            console.log("Telefono del INPUT: " + validarTelefono.value);
+
+            if (telefono === validarTelefono.value) {
+                var overlay = document.querySelector('.overlay');
+                overlay.style.display = 'none';
+                phoneForm.style.display = "none";
+                codeForm.style.display = "block";
+                boton.style.display = "block";
+                botonCorregir.style.display = "block";
+                boton.setAttribute('disabled', '');
+            }
+
+            if (telefono !== validarTelefono.value) {
+
+                let btnPhoneValidation = document.getElementById('btn-phoneValidation');
+                btnPhoneValidation.style.display = "none"; 
+                dobForm.style.display = "block";
+
+                let fechaNacimiento = new Date(JsonEstudiante[0].feC_NACIMIENTO);
+                var anioCorrecto = fechaNacimiento.getFullYear();
+                console.log("Anio de nacimiento: " + anioCorrecto);
+
+                let dobOptionsContainer = document.getElementById('dob-options');
+
+                let anioAleatorio1 = anioCorrecto + Math.floor(Math.random() * 5) + 1;
+                let anioAleatorio2 = anioCorrecto - Math.floor(Math.random() * 5) - 1;
+
+                let opcionesAnioNacimiento = [anioAleatorio1, anioAleatorio2, anioCorrecto];
+                opcionesAnioNacimiento.sort(() => Math.random() - 0.5);
+
+                opcionesAnioNacimiento.forEach(anio => {
+                    let input = document.createElement('input');
+                    input.type = 'radio';
+                    input.name = 'dob'; // Para que solo una opción pueda ser seleccionada
+
+                    let label = document.createElement('label');
+                    label.textContent = anio;
+
+                    dobOptionsContainer.appendChild(input);
+                    dobOptionsContainer.appendChild(label);
+                    dobOptionsContainer.appendChild(document.createElement('br'));
+                });
+            }
+
+            dobForm.addEventListener('submit', function(){
+
+                let selectedOption = document.querySelector('input[name="dob"]:checked');
+
+                console.log("Valor del select: " + selectedOption);
+
+                if (selectedOption) {
+                    let selectedYear = parseInt(selectedOption.nextElementSibling.textContent);
+                    console.log("Valor del Año: " + selectedOption);
+
+                    if (selectedYear === anioCorrecto) {
+                        alert("CORRECTO!")
+                        var overlay = document.querySelector('.overlay');
+                        overlay.style.display = 'none';
+                        phoneForm.style.display = "none";
+                        codeForm.style.display = "block";
+                        boton.style.display = "block";
+                        botonCorregir.style.display = "block";
+                        boton.setAttribute('disabled', '');
+                    } else {
+                        alert("El usuario seleccionó un año incorrecto. No fue posible validar su identidad.")
+                        console.log('El usuario seleccionó un año incorrecto. Por favor, intente de nuevo.');
+                    }
+                } else {
+                    alert("Por favor, seleccione un año de nacimiento.")
+                    console.log('Por favor, seleccione un año de nacimiento.');
+                }
+            })
+        });
+
+
+
+
+        
+
+
+
+    </script>
+
+</body>
+</html>
